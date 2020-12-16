@@ -11,10 +11,10 @@ COPY . .
 
 #ARG configuration=production
 #RUN npm run build -- --configuration $configuration
-RUN ng build --prod
+RUN ng build
 # the base image for this is an alpine based nginx image
 FROM nginx:alpine
 # copy the build folder from react to the root of nginx (www)
-COPY --from=build /app/dist/pg /usr/share/nginx/html
+COPY --from=build /app /usr/share/nginx/html
 # expose port
 EXPOSE 80
