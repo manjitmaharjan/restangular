@@ -17,4 +17,4 @@ FROM nginx:alpine
 # copy the build folder from react to the root of nginx (www)
 COPY --from=build /app /usr/share/nginx/html
 # expose port
-EXPOSE 4566
+EXPOSE 80
