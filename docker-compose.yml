@@ -2,8 +2,8 @@ version: "3.7"
 
 services:
   app:
-    image: test
-    container_name: test
+    image: test5
+    container_name: test5
     network_mode: host
     build: .
     volumes:
